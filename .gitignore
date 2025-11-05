@@ -1,0 +1,12 @@
+# 仮想環境
+venv/
+
+# Pythonのキャッシュ
+__pycache__/
+*.pyc
+
+# APIキーなどの秘密情報
+.env
+
+# macOS
+.DS_Store

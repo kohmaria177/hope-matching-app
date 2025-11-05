@@ -1,0 +1,40 @@
+[
+  {
+    "name": "HOPE給付型奨学金（地方出身者向け）",
+    "provider": "HOPE財団",
+    "category": "財団",
+    "type": "給付",
+    "amount_per_year": 500000,
+    "period": "4年間",
+    "eligible_grades": ["University_1st", "University_2nd"],
+    "eligible_prefs": ["北海道", "青森県", "沖縄県"],
+    "fields": ["工学", "人文学"],
+    "income_requirement": "世帯年収300万円未満",
+    "other_requirements": "地方出身で、東京圏の大学に進学する者",
+    "deadline": "2026-03-15T00:00:00Z",
+    "required_docs": ["住民票", "所得証明書", "推薦書"],
+    "application_method": "Web",
+    "difficulty_hint": "Medium",
+    "url": "https://hope-foundation.org/scholarship-A",
+    "is_published": true
+  },
+  {
+    "name": "未来を拓く貸与奨学金（社会的養護経験者）",
+    "provider": "NPOチャレンジ",
+    "category": "NPO",
+    "type": "貸与",
+    "amount_per_year": 800000,
+    "period": "大学卒業まで",
+    "eligible_grades": ["HighSchool_3rd", "University_1st"],
+    "eligible_prefs": [],
+    "fields": ["全分野"],
+    "income_requirement": "条件なし",
+    "other_requirements": "児童養護施設または里親のもとで生活した経験のある者",
+    "deadline": "2025-12-25T00:00:00Z",
+    "required_docs": ["施設長推薦", "在学証明書"],
+    "application_method": "郵送",
+    "difficulty_hint": "Easy",
+    "url": "https://npo-challenge.org/support-B",
+    "is_published": true
+  }
+]
