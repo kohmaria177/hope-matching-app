@@ -13,12 +13,11 @@ from contextlib import asynccontextmanager
 
 
 # 作成した各モジュールをインポート
-from .database import get_session, engine, DATABASE_URL
+from .database import get_session, engine, DATABASE_URL, create_engine
 from .models import Profile, Scholarship, MatchResult
 from .schemas import MatchResponseSchema
 from .matching_logic import generate_rule_based_results # フェイルセーフ用
 from .gemini_client import generate_match_results_gemini # Geminiクライアント
-from sqlmodel import create_engine
 
 #スケジューラーのジョブのインポート
 from .scheduler import delete_old_data_job

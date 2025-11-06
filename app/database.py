@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 
 load_dotenv() # .env ファイルから環境変数を読み込む
 
+# Export for other modules to use
+__all__ = ['create_engine', 'Session', 'engine', 'get_session', 'DATABASE_URL']
+
 # .env または Docker Compose の設定からDB情報を取得
 DB_USER = os.getenv("POSTGRES_USER", "user")
 DB_PASSWORD = os.getenv("POSTGRES_PASSWORD", "password")
