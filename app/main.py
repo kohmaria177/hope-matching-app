@@ -13,7 +13,7 @@ from contextlib import asynccontextmanager
 
 
 # 作成した各モジュールをインポート
-from .database import get_session, engine
+from .database import get_session, engine, DATABASE_URL, create_engine
 from .models import Profile, Scholarship, MatchResult
 from .schemas import MatchResponseSchema
 from .matching_logic import generate_rule_based_results # フェイルセーフ用
@@ -48,7 +48,7 @@ async def lifespan(app: FastAPI):
     scheduler.shutdown()
 # -------------------------------------------------------------
 # FastAPIアプリケーションの初期化
-app = FastAPI(title="HOPE マッチングAI")
+app = FastAPI(title="HOPE マッチングAI", lifespan=lifespan)
 # -------------------------------------------------------------
 # 【追記】CORS設定
 # -------------------------------------------------------------
