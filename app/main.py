@@ -53,7 +53,7 @@ app = FastAPI(title="HOPE マッチングAI")
 # 【追記】CORS設定
 # -------------------------------------------------------------
 origins = [
-    "http://localhost:3000", # Next.js (フロントエンド) のアドレス
+   "*" # "http://localhost:3000", # Next.js (フロントエンド) のアドレス
 ]
 
 app.add_middleware(
