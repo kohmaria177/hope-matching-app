@@ -9,10 +9,10 @@ from typing import List
 # .envファイルからAPIキーを読み込む設定
 # (app/database.py で load_dotenv() が呼ばれている前提)
 API_KEY = os.getenv("GEMINI_API_KEY")
-if not API_KEY:
-    raise ValueError("GEMINI_API_KEY が .env ファイルに設定されていません。")
-
-genai.configure(api_key=API_KEY)
+if API_KEY:
+    genai.configure(api_key=API_KEY)
+else:
+    print("警告: GEMINI_API_KEY が設定されていません。Gemini機能は利用できません。")
 
 def generate_match_results_gemini(
     profile: Profile, 
@@ -21,6 +21,8 @@ def generate_match_results_gemini(
     """
     Gemini APIを呼び出し、構造化されたマッチング結果を取得する
     """
+    if not API_KEY:
+        raise ValueError("GEMINI_API_KEY が設定されていません。フェイルセーフ戦略を使用します。")
     
     model = genai.GenerativeModel(
         model_name="gemini-1.5-flash", # 高速・安価なモデル推奨
